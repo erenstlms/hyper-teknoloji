@@ -21,7 +21,7 @@ function Pagination({ currentPage, totalPages, paginate }) {
                 href="#"
                 className={`flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 ${
                   currentPage === index + 1
-                    ? "text-red-600 border-blue-300 bg-blue-50"
+                    ? "text-red-600 font-bold border-blue-300 bg-blue-50"
                     : ""
                 }`}
                 onClick={() => paginate(index + 1)}
