@@ -20,8 +20,6 @@ function ProductList() {
 
   const totalPages = Math?.ceil(mockData?.length / itemsPerPage);
 
-  console.log("currentPage", currentPage);
-
   return (
     <div className={`${theme === "dark" ? "bg-gray-900" : ""}`}>
       <div className="max-w-7xl mx-auto py-4">

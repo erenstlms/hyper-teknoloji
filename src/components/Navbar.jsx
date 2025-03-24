@@ -1,35 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdDarkMode, MdFavorite, MdLightMode } from "react-icons/md";
 import { useTheme } from "../context/ThemeContext";
 import { useCart } from "../context/CartContext";
-import axios from "axios";
+// import axios from "axios";
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { cartItems, favoriteItems } = useCart();
-  const [userData, setUserData] = useState(null);
+  // const [userData, setUserData] = useState(null);
 
-  useEffect(() => {
-    const token =
-      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJMb2dpblR5cGUiOiIxIiwiQ3VzdG9tZXJJRCI6IjE1NTk1MSIsIkZpcnN0TmFtZSI6Ikh5cGVyIiwiTGFzdE5hbWUiOiJ2MiIsIkVtYWlsIjoiZGVtb0BoeXBlci5jb20iLCJDdXN0b21lclR5cGVJRCI6IjIiLCJJc1Jlc2VsbGVyIjoiMSIsIklzQVBJIjoiMSIsIlJlZmVyYW5jZUlEIjoiIiwiUmVnaXN0ZXJEYXRlIjoiMy8yMS8yMDI1IDY6MjI6MjQgUE0iLCJleHAiOjIwNTM4MTkzMTksImlzcyI6Imh0dHBzOi8vaHlwZXJ0ZWtub2xvamkuY29tLnRyIiwiYXVkIjoiaHR0cHM6Ly9oeXBlcnRla25vbG9qaS5jb20udHIifQ.vQfpXeAEoCaBlm65JnvBU1_D79LFZ6Ph2OSxS5B-8fU";
+  // useEffect(() => {
+  //   const token =
+  //     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJMb2dpblR5cGUiOiIxIiwiQ3VzdG9tZXJJRCI6IjE1NTk1MSIsIkZpcnN0TmFtZSI6Ikh5cGVyIiwiTGFzdE5hbWUiOiJ2MiIsIkVtYWlsIjoiZGVtb0BoeXBlci5jb20iLCJDdXN0b21lclR5cGVJRCI6IjIiLCJJc1Jlc2VsbGVyIjoiMSIsIklzQVBJIjoiMSIsIlJlZmVyYW5jZUlEIjoiIiwiUmVnaXN0ZXJEYXRlIjoiMy8yMS8yMDI1IDY6MjI6MjQgUE0iLCJleHAiOjIwNTM4MTkzMTksImlzcyI6Imh0dHBzOi8vaHlwZXJ0ZWtub2xvamkuY29tLnRyIiwiYXVkIjoiaHR0cHM6Ly9oeXBlcnRla25vbG9qaS5jb20udHIifQ.vQfpXeAEoCaBlm65JnvBU1_D79LFZ6Ph2OSxS5B-8fU";
 
-    axios
-      .get("https://api.hyperteknoloji.com.tr/Customer/Get", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((response) => {
-        setUserData(response?.data?.data);
-      })
-      .catch((error) => {
-        console.error("Error", error);
-      });
-  }, []);
-
-  console.log("userData", userData);
+  //   axios
+  //     .get("https://api.hyperteknoloji.com.tr/Customer/Get", {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`,
+  //       },
+  //     })
+  //     .then((response) => {
+  //       setUserData(response?.data?.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error", error);
+  //     });
+  // }, []);
 
   return (
     <>
