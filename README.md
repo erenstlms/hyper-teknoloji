@@ -10,11 +10,13 @@ Bu proje, Hyper Teknoloji için frontend bir uygulama geliştirme projesidir. Ku
 - **Axios**: API isteklerini gerçekleştirmek için Axios kütüphanesi kullanıldı.
 - **React Toastify**: Kullanıcılara bilgi vermek amacıyla toast mesajları kullanıldı.
 - **Tailwind CSS**: Stil ve layout için Tailwind CSS kullanıldı.
+- **Shadcn Ui**: Modern UI bileşenleri için Shadcn Ui kullanıldı.
 
 ## Özellikler
 
 - **Favori Ürünler**: Kullanıcılar, ürünleri favorilerine ekleyebilir ve favorilerine eklenen ürünlerin sayısını görüntüleyebilir.
 - **Sepet**: Kullanıcılar, ürünleri sepete ekleyebilir ve sepetlerindeki ürün sayısını görüntüleyebilir.
+- **Sepetim ve Favorilerim Listesi**: Kullanıcılar sepet veya favoriler butonlarına tıklayarak seçtiği ürünlerin listesini görebilir.
 - **Tema Değiştirme**: Kullanıcılar, uygulamanın temasını light/dark mod arasında değiştirebilir.
 - **API İstekleri**: Kullanıcı bilgilerini almak için bir API'den veri çekilebilir.
 - **Pagination**: Belirli bir sayfa üzerinde gezinmek için kullanıcı arayüzü sağlar.
