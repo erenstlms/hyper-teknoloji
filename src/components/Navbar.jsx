@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
 import { FiShoppingCart } from "react-icons/fi";
 import { MdDarkMode, MdFavorite, MdLightMode } from "react-icons/md";
 import { useTheme } from "../context/ThemeContext";
 import { useCart } from "../context/CartContext";
+import RightSideSheet from "./RightSideSheet";
 // import axios from "axios";
 
 function Navbar() {
   const { theme, toggleTheme } = useTheme();
   const { cartItems, favoriteItems } = useCart();
+  const [activeSheet, setActiveSheet] = useState(null);
+
   // const [userData, setUserData] = useState(null);
 
   // useEffect(() => {
@@ -42,7 +45,10 @@ function Navbar() {
               <Link to="/">Hyper Teknoloji Frontend Case</Link>
             </div>
             <div className="flex space-x-6 relative">
-              <div className="relative cursor-pointer">
+              <div
+                onClick={() => setActiveSheet("favorites")}
+                className="relative cursor-pointer"
+              >
                 <MdFavorite className="h-6 w-6" />
                 {favoriteItems?.length > 0 && (
                   <span className="absolute -top-2 -right-4 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -50,7 +56,10 @@ function Navbar() {
                   </span>
                 )}
               </div>
-              <div className="relative cursor-pointer">
+              <div
+                onClick={() => setActiveSheet("cart")}
+                className="relative cursor-pointer"
+              >
                 <FiShoppingCart className="h-6 w-6" />
                 {cartItems?.length > 0 && (
                   <span className="absolute -top-2 -right-4 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
@@ -72,6 +81,10 @@ function Navbar() {
             </div>
           </div>
         </div>
+        <RightSideSheet
+          activeSheet={activeSheet}
+          onClose={() => setActiveSheet(null)}
+        />
       </nav>
     </>
   );

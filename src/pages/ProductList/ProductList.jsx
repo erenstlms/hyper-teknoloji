@@ -4,6 +4,7 @@ import ProductItem from "./components/ProductItem";
 import { useCart } from "../../context/CartContext";
 import Pagination from "../../components/Pagination";
 import mockData from "../../../mockData.json";
+import RightSideSheet from "@/components/RightSideSheet";
 
 function ProductList() {
   const { theme } = useTheme();

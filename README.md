@@ -17,6 +17,7 @@ Bu proje, Hyper Teknoloji için frontend bir uygulama geliştirme projesidir. Ku
 - **Sepet**: Kullanıcılar, ürünleri sepete ekleyebilir ve sepetlerindeki ürün sayısını görüntüleyebilir.
 - **Tema Değiştirme**: Kullanıcılar, uygulamanın temasını light/dark mod arasında değiştirebilir.
 - **API İstekleri**: Kullanıcı bilgilerini almak için bir API'den veri çekilebilir.
+- **Pagination**: Belirli bir sayfa üzerinde gezinmek için kullanıcı arayüzü sağlar.
 
 ## Kurulum
 
