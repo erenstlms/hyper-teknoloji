@@ -63,7 +63,7 @@ function RightSideSheet({ activeSheet, onClose }) {
 
         <SheetFooter>
           <SheetClose asChild>
-            <Button type="button">Kapat</Button>
+            <Button type="button">ALIŞVERİŞE DEVAM ET</Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
